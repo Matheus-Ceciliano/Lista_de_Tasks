@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <section id="container">
+
+        <div class="title">
+            <h1>LISTA DE TAREFAS</h1>
+        </div>
+
+        <div class="add_task" id="task_add">
+
+            <input type="text" placeholder="Adicionar Tarefa" required id="input_task">
+
+            <input type="date" name="data" lang="pt-BR" id="input_data">
+
+            <button class="btn-add" onclick="addTask()" id="button_task">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+        </div>
+
+        <div class="table_task" id="task_table">
+
+            <table id="taskTabela">
+
+                <thead class="task-thead">
+                    <tr>
+                        <td>Tarefa</td>
+                        <td>Prazo para conclusão</td>
+                        <td>Status</td>
+                        <td>ações</td>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody_task">
+
+                </tbody>
+
+
+
+
+
+            </table>
+
+
+
+
+        </div>
+    </section>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

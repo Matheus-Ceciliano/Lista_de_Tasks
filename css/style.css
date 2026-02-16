@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    letter-spacing: -0.01em;
+
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title h1 {
+    margin-top: 50px;
+    font-size: 42px;
+}
+
+.add_task {
+    display: flex;
+    gap: 5px;
+}
+
+input[type='text'] {
+    width: 750px;
+    height: 45px;
+    border: 1px solid rgba(201, 201, 201, 0.57);
+    padding-left: 10px;
+    border-radius: 10px;
+    padding: 0 14px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+input[type='text']::placeholder {
+    color: #9aa0a6;
+}
+
+input[type='text']:focus {
+    border-color: #1f5eaf;
+    box-shadow: 0 0 0 3px rgba(31, 94, 175, 0.15);
+    outline: none;
+}
+
+input[type="date"] {
+
+    border: none;
+    outline: none;
+
+    padding: 10px 14px;
+
+    background: #f5f7fa;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+
+input[type="date"]:focus {
+    background: #eef2f7;
+}
+
+
+.btn-add {
+    background-color: #0197FF;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-left: 2px;
+    transition: all 0.25s ease;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    background-color: #174b8f;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* efeito clique (muito importante UX) */
+.btn-add:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 1151px;
+    margin-top: 30px;
+    padding: 0;
+
+
+    table-layout: fixed;
+
+
+}
+
+.table_task thead tr td {
+    text-transform: uppercase;
+    border: 1px solid #dee2e7;
+    color: #050505;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+
+tbody tr:hover {
+    background: #f5f5f5;
+}
+
+tbody tr td {
+    border: 1px solid #dee2e7;
+    color: #3c3c3c;
+    padding: 5px 20px;
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.btn_delete {
+    border: none;
+    color: white;
+    height: 38px;
+    width: 38px;
+    transition: all 0.85s ease;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.btn_delete:hover {
+    transform: translateY(-2px);
+    background-color: #dc0808;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn_delete:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.select_status {
+    margin-top: 10px;
+    padding: 5px;
+    width: 250px;
+    border-radius: 8px;
+    background-color: #EBEBEB;
+    border: none;
+}
+
+.select_status:focus {
+    border-color: #1f5eaf;
+    box-shadow: 0 0 0 3px rgba(31, 94, 175, 0.15);
+    outline: none;
+}
+
+#status {
+
+
+    margin: 0;
+}
