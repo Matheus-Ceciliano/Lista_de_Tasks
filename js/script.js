@@ -115,7 +115,8 @@ function calcularStatus(data_tarefa) {
     dataAtual.setHours(0, 0, 0, 0);
     dataObj.setHours(0, 0, 0, 0);
 
-    const diffDias = Math.floor((dataObj - dataAtual) / (1000 * 60 * 60 * 24));
+    const diffDias = Math.floor((dataObj - dataAtual) / (1000 * 60 * 60 * 24) + 1);
+    alert("");
 
     if (diffDias > 1) {
         return `Prazo de ${diffDias} dias`;
