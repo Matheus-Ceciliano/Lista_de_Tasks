@@ -83,7 +83,6 @@ function addTask() {
     else {
         let novaTarefa = inputElement.value;
         let data_tarefa = inputData.value;
-        alert(data_tarefa)
 
 
 
