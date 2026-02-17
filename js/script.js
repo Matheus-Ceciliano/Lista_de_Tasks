@@ -29,6 +29,8 @@ function renderTask() {
         const tdData = document.createElement("td");
         tdData.textContent = tasks.data;
 
+
+
         const tdStatus = document.createElement("td");
         tdStatus.textContent = status;
 
@@ -45,7 +47,10 @@ function renderTask() {
             salvardados();
         });
 
-        const dataBR = new Date(tasks.data).toLocaleDateString("pt-BR");
+        const [ano, mes, dia] = tasks.data.split("-");
+        const dataLocal = new Date(ano, mes - 1, dia);
+        const dataBR = dataLocal.toLocaleDateString("pt-BR");
+
         if (tasks.data == "") {
             tdData.textContent = "Sem Prazo definido";
         }
@@ -78,7 +83,7 @@ function addTask() {
     else {
         let novaTarefa = inputElement.value;
         let data_tarefa = inputData.value;
-
+        alert(data_tarefa)
 
 
 
@@ -115,7 +120,7 @@ function calcularStatus(data_tarefa) {
     dataAtual.setHours(0, 0, 0, 0);
     dataObj.setHours(0, 0, 0, 0);
 
-    const diffDias = Math.floor((dataObj - dataAtual) / (1000 * 60 * 60 * 24) + 1);
+    const diffDias = Math.floor((dataObj - dataAtual) / (1000 * 60 * 60 * 24)) + 1;
 
 
     if (diffDias > 1) {
@@ -136,7 +141,4 @@ function calcularStatus(data_tarefa) {
 }
 
 
-setInterval(() => {
-    renderTask();
 
-}, 300);
