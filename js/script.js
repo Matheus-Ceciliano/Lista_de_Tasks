@@ -42,9 +42,13 @@ function renderTask() {
 
 
         button.addEventListener("click", () => {
-            tarefas.splice(index, 1);
-            renderTask();
-            salvardados();
+            let resposta = confirm("Deseja realmente apagar?")
+
+            if (resposta === true) {
+                tarefas.splice(index, 1);
+                renderTask();
+                salvardados();
+            }
         });
 
         const [ano, mes, dia] = tasks.data.split("-");
